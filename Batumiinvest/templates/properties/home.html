@@ -1,0 +1,92 @@
+﻿{% load static %}
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f7">
+  <meta name="description" content="იპოვე ბათუმში ბინა, ვილა ან საინვესტიციო უძრავი ქონება. შეადარე ROI და დაგეგმე ინვესტიცია.">
+  <title>Batumi Invest — უძრავი ქონება ბათუმში</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  <script src="{% static 'js/site.js' %}" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#top" aria-label="Batumi Invest მთავარი გვერდი">
+        <span class="brand-mark">B<span>.</span></span>
+        <span class="brand-copy"><strong>BATUMI INVEST</strong><small>უძრავი ქონების ჰაბი</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="მთავარი ნავიგაცია">
+        <a href="#listings">ქონება</a><a href="#calculator">კალკულატორი</a><a href="#about">ჩვენ შესახებ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-contact" href="https://wa.me/995593902052" target="_blank" rel="noreferrer"><span class="online-dot"></span> დაგვიკავშირდი</a>
+        <button class="icon-btn theme-toggle" aria-label="მუქი რეჟიმის ჩართვა" title="მუქი რეჟიმი"><svg viewBox="0 0 24 24"><path d="M20.3 15.2A8.5 8.5 0 0 1 8.8 3.7 8.6 8.6 0 1 0 20.3 15.2Z"/></svg></button>
+        <button class="icon-btn menu-toggle" aria-label="მენიუს გახსნა" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" aria-label="მობილური ნავიგაცია"><a href="#listings">ქონება</a><a href="#calculator">კალკულატორი</a><a href="#about">ჩვენ შესახებ</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-mark">↗</span> მაღალშემოსავლიანი ინვესტიციები ბათუმში</div>
+        <h1>იპოვე ადგილი,<br><em>რომელიც შენთვის</em><br>მუშაობს.</h1>
+        <p>შავი ზღვის სანაპირო, ახალი ბულვარი, ძველი ბათუმი და ექსკლუზიური ვილები — შეარჩიე ქონება შენი მიზნის მიხედვით.</p>
+        <div class="hero-proof"><div class="avatar-stack"><span>ნ</span><span>მ</span><span>ა</span></div><span><strong>120+</strong> კმაყოფილი ინვესტორი</span><span class="proof-divider"></span><span><strong>10–15%</strong> პოტენციური წლიური ROI</span></div>
+      </div>
+      <div class="hero-art" aria-label="ბათუმის სანაპირო და თანამედროვე შენობები">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=88" alt="ბათუმის ზღვისპირა ქალაქი მზის ჩასვლისას">
+        <div class="image-shade"></div>
+        <div class="hero-float float-top"><span class="float-icon">⌂</span><span><small>ხელმისაწვდომია</small><strong>შერჩეული ქონება</strong></span><b>06</b></div>
+        <div class="hero-float float-bottom"><span class="return-icon">↗</span><span><small>საშუალო პოტენციური უკუგება</small><strong>წლიურად 12.4%</strong></span></div>
+        <div class="hero-art-caption"><span>41° 38′ N &nbsp; 41° 38′ E</span><strong>BATUMI, GEORGIA</strong></div>
+      </div>
+    </section>
+
+    <section class="search-shell wrap" aria-label="ქონების ძიება">
+      <div class="deal-tabs" role="tablist" aria-label="გარიგების ტიპი">
+        <button class="deal-tab active" data-deal="all" role="tab" aria-selected="true">ყველა</button>
+        <button class="deal-tab" data-deal="buy" role="tab" aria-selected="false">ყიდვა</button>
+        <button class="deal-tab" data-deal="rent" role="tab" aria-selected="false">ქირაობა</button>
+        <button class="deal-tab deal-invest" data-deal="invest" role="tab" aria-selected="false"><span>✳</span> მაღალი ROI</button>
+      </div>
+      <div class="search-fields">
+        <label class="field"><span>უბანი / ლოკაცია</span><select id="district"><option value="all">ყველა უბანი</option><option value="boulevard">ახალი ბულვარი</option><option value="old-town">ძველი ბათუმი</option><option value="orbi">ორბი თაუერსი</option><option value="gonio">გონიო / კვარიათი</option><option value="makhinjauri">მახინჯაური / ჩაქვი</option></select></label>
+        <label class="field"><span>ქონების ტიპი</span><select id="property-type"><option value="all">ყველა ტიპი</option><option value="apartment">ბინა / აპარტამენტი</option><option value="house">ვილა / სახლი</option><option value="commercial">კომერციული</option></select></label>
+        <label class="field"><span>საძინებლები</span><select id="beds"><option value="all">ნებისმიერი</option><option value="studio">სტუდიო</option><option value="1">1 საძინებელი</option><option value="2">2 საძინებელი</option><option value="3">3+ საძინებელი</option></select></label>
+        <button class="search-button" id="search-button"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg> ძებნა</button>
+      </div>
+      <div class="quick-filters"><span>სწრაფი ფილტრი</span><button data-tag="sea">🌊 ზღვის ხედი</button><button data-tag="installment">◷ შიდა განვადება</button><button data-tag="turnkey">⌂ გასაღების ჩაბარებით</button><button class="clear-filters" id="clear-filters">გასუფთავება</button></div>
+    </section>
+
+    <section class="listings-section wrap" id="listings">
+      <div class="section-heading"><div><div class="section-kicker">შენთვის შერჩეული</div><h2>იპოვე შენი შემდეგი <em>მისამართი.</em></h2><p>სანდო შეთავაზებები ბათუმის საუკეთესო ლოკაციებში</p></div><label class="sort-control"><span>სორტირება</span><select id="sort"><option value="new">ახალი დამატებული</option><option value="low">ფასი: დაბლიდან მაღლა</option><option value="high">ფასი: მაღლიდან დაბლა</option><option value="roi">მაღალი ROI</option></select></label></div>
+      <div class="results-meta"><span>ხელმისაწვდომია <strong id="results-count">{{ listings|length }}</strong> განცხადება</span><span class="results-note"><span class="online-dot"></span> განახლებულია დღეს</span></div>
+      <div class="property-grid" id="property-grid">
+        {% for property in listings %}
+        <article class="property-card" data-id="{{ property.id }}" data-deal="{{ property.deal }}" data-district="{{ property.district_key }}" data-type="{{ property.type_key }}" data-price="{{ property.price }}" data-roi="{{ property.roi }}" data-rooms="{{ property.rooms }}" data-tags="{{ property.tags|join:',' }}">
+          <div class="property-image"><img src="https://images.unsplash.com/{{ property.image }}?auto=format&fit=crop&w=900&q=85" alt="{{ property.title }}" loading="lazy"><span class="image-label">{{ property.badge }}</span><button class="favorite-btn" aria-label="რჩეულებში დამატება" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 4.1-8.8 10-8.8 10s-8.8-5.9-8.8-10A4.7 4.7 0 0 1 12 6.4a4.7 4.7 0 0 1 8.8 2.3Z"/></svg></button>{% if property.roi %}<span class="roi-pill">ROI {{ property.roi }}%</span>{% endif %}</div>
+          <div class="property-content"><div class="property-location"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg>{{ property.district }}</div><h3>{{ property.title }}</h3><div class="property-features"><span>▱ {{ property.area }} მ²</span><span>⌂ {{ property.rooms }}</span><span>⌑ {{ property.floor }}</span></div><div class="property-bottom"><div class="price"><small>{% if property.deal == 'rent' %}თვეში{% else %}ფასი{% endif %}</small><strong>{{ property.price_label }}</strong></div><a class="card-arrow" href="https://wa.me/995593902052?text=გამარჯობა%2C%20დაინტერესებული%20ვარ%20ობიექტით%20%23{{ property.id }}" target="_blank" rel="noreferrer" aria-label="დეტალების მოთხოვნა"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>შედეგები ვერ მოიძებნა</h3><p>სცადე ფილტრების შეცვლა ან გასუფთავება.</p><button class="outline-button" id="empty-clear">ფილტრების გასუფთავება</button></div>
+      <div class="all-listings"><span>ეძებ კონკრეტულ ობიექტს?</span><a href="https://wa.me/995593902052" target="_blank" rel="noreferrer">მოგვწერე და შეგირჩევთ <b>↗</b></a></div>
+    </section>
+
+    <section class="calculator-section" id="calculator"><div class="calculator-wrap wrap"><div class="calculator-copy"><div class="section-kicker light-kicker">ინვესტორის ინსტრუმენტი</div><h2>გეგმა, რომელიც<br>ციფრებს <em>ეყრდნობა.</em></h2><p>შეაფასე მოსალოდნელი ქირის შემოსავალი და წლიური უკუგება. შეცვალე პარამეტრები და ნახე, როგორ იცვლება შედეგი.</p><ul><li><span>✓</span> ქირის წლიური პროგნოზი</li><li><span>✓</span> ინვესტიციის ამოღების ვადა</li><li><span>✓</span> იპოთეკის სავარაუდო შენატანი</li></ul><div class="calculator-footnote">* გამოთვლები საორიენტაციოა და არ წარმოადგენს ფინანსურ რჩევას.</div></div>
+      <div class="calculator-card"><div class="calc-card-head"><div><span class="calc-icon">↗</span><h3>ROI კალკულატორი</h3></div><span class="calc-live"><i></i> ცოცხალი გამოთვლა</span></div><label class="range-label" for="price-range"><span>ქონების ღირებულება</span><strong id="price-value">$75,000</strong></label><input id="price-range" type="range" min="20000" max="500000" step="1000" value="75000"><div class="range-limits"><span>$20,000</span><span>$500,000</span></div><label class="range-label rent-label" for="rent-range"><span>მოსალოდნელი თვიური ქირა</span><strong id="rent-value">$850</strong></label><input id="rent-range" type="range" min="200" max="5000" step="50" value="850"><div class="range-limits"><span>$200</span><span>$5,000</span></div><div class="calc-results"><div><span>წლიური ROI</span><strong id="roi-result">13.6%</strong></div><div><span>ამოღების ვადა</span><strong id="payback-result">7.4 <small>წელი</small></strong></div><div><span>წლიური შემოსავალი</span><strong id="annual-result">$10,200</strong></div></div><p class="calc-disclaimer">შეფასება არ ითვალისწინებს გადასახადებს, მართვის ან მოვლის ხარჯებს.</p></div>
+      </div></section>
+
+    <section class="about-strip wrap" id="about"><div class="about-symbol">B<span>.</span></div><div><div class="section-kicker">ბათუმის ბაზარი შენს ხელისგულზე</div><h2>ინვესტიცია იწყება <em>სწორი ინფორმაციით.</em></h2><p>ჩვენ დაგეხმარებით იპოვო ადგილი, რომელიც შენს მიზნებს შეესაბამება — დასასვენებლად, საცხოვრებლად ან შემოსავლის მისაღებად.</p></div><a class="about-cta" href="https://wa.me/995593902052" target="_blank" rel="noreferrer">გაიარე კონსულტაცია <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#top"><span class="brand-mark">B<span>.</span></span><span class="brand-copy"><strong>BATUMI INVEST</strong><small>უძრავი ქონების ჰაბი</small></span></a><p>ბათუმის უძრავი ქონების უნივერსალური პლატფორმა</p><div class="footer-links"><a href="https://wa.me/995593902052" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="https://t.me/batumi_invest_demo" target="_blank" rel="noreferrer">Telegram ↗</a></div></div><div class="wrap footer-bottom"><span>© 2026 BATUMI INVEST</span><span>ბათუმი, საქართველო <i class="online-dot"></i></span><a href="#top">ზემოთ დაბრუნება ↑</a></div></footer>
+</body>
+</html>
