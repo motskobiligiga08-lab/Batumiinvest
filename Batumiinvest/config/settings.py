@@ -4,7 +4,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-batumi-invest-local-demo-change-before-deployment"
 DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
+ALLOWED_HOSTS = ['batumiinvest.onrender.com', '127.0.0.1', 'localhost', '*']
 
 INSTALLED_APPS = [
     "django.contrib.staticfiles",
